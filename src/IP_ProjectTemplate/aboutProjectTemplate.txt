@@ -1,0 +1,8 @@
+﻿IP_ProjectTemplate ver1.0.0
+
+■プロジェクトテンプレート保存場所
+	エクスポート先：
+		\My Documents\<Visual Studio のバージョン>\My Exported Templates
+	VisualStudioの参照先：
+		\My Documents\<Visual Studio のバージョン>\Templates\ProjectTemplates\
+		引用元→https://msdn.microsoft.com/ja-jp/library/y3kkate1.aspx
