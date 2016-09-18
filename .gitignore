@@ -2,3 +2,5 @@
 *.csproj.FileListAbsolute.txt
 *.vshost.exe
 *.vshost.exe.manifest
+*.pdb
+*.cache
