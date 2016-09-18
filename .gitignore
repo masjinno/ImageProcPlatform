@@ -1,0 +1,4 @@
+*.resources
+*.csproj.FileListAbsolute.txt
+*.vshost.exe
+*.vshost.exe.manifest
