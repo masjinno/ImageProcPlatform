@@ -39,7 +39,7 @@ namespace IP_Filter.Setting
         private void OK_Button_Click(object sender, EventArgs e)
         {
             //パラメータ更新処理
-            //TODO:パラメータ更新処理
+            originalFP = changedFP;
 
             this.Close();
         }
@@ -52,9 +52,17 @@ namespace IP_Filter.Setting
 
         private void FilterSize_NumericUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (!FilterSize_NumericUpDown.Enabled)
+            {
+                goto NoChange;
+            }
             Filter_DataGridView.RowCount = (int)FilterSize_NumericUpDown.Value;
             Filter_DataGridView.ColumnCount = (int)FilterSize_NumericUpDown.Value;
-            
+
+            return;
+
+        NoChange:
+            return;
         }
     }
 }

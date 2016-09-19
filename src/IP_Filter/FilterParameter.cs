@@ -23,7 +23,6 @@ namespace IP_Filter.Parameter
         /// フィルター本体
         /// </summary>
         public double[,] FilterArray;
-        private int p;
 
         /// <summary>
         /// コンストラクタ
