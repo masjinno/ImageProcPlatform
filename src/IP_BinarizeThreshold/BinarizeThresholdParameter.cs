@@ -3,50 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Windows.Forms;
+
 namespace IP_BinarizeThreshold.Parameter  //RENAME
 {
-    class BinarizeThresholdParameter  //RENAME
+    public class BinarizeThresholdParameter  //RENAME
     {
-        /// <summary>
-        /// 画像処理に使用するパラメータ
-        /// </summary>
-        public struct parameter
-        {
-            /// <summary>
-            /// true:有効
-            /// false:無効
-            /// </summary>
-            bool isEnabled;
-
-            //画像処理に使用するパラメータを定義してください。
-
-
-        };
+        public const int THRESHOLD_INIT = 255 / 2;
+        public const int THRESHOLD_MIN = 0;
+        public const int THRESHOLD_MAX = 255;
 
         /// <summary>
-        /// パラメータのインスタンス
+        /// true:有効
+        /// false:無効
         /// </summary>
-        public parameter _param;
-        public parameter param
+        bool isEnabled;
+
+        //画像処理に使用するパラメータを定義してください。
+        private int _threshold = -1;
+        public int threshold
         {
             get
             {
-                return _param;
+                return _threshold;
             }
             set
             {
-                //バリデーションがあれば記述すること
-                this._param = value;
+                if (BinarizeThresholdParameter.THRESHOLD_MIN <= value && value <= BinarizeThresholdParameter.THRESHOLD_MAX)
+                {
+                    _threshold = value;
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "value is NG.\n" + BinarizeThresholdParameter.THRESHOLD_MIN.ToString() + " <= value <= " + BinarizeThresholdParameter.THRESHOLD_MAX.ToString(),
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    _threshold = BinarizeThresholdParameter.THRESHOLD_INIT;
+                }
             }
+        }
+
+        public BinarizeThresholdParameter()
+        {
+            threshold = THRESHOLD_INIT;
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="input"></param>
-        public void SetParameter(parameter input)
+        public void SetParameter(int th)
         {
-
+            threshold = th;
         }
     }
 }

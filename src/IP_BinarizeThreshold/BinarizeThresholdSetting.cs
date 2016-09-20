@@ -7,27 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using IP_BinarizeThreshold.Parameter;
+
 namespace IP_BinarizeThreshold.Setting    //RENAME
 {
     public partial class BinarizeThresholdSetting : Form  //RENAME
     {
         //パラメータ
-        //TODO:宣言
+        static BinarizeThresholdParameter binarizeThresholdParam;
 
-        public BinarizeThresholdSetting() //RENAME
+
+        public BinarizeThresholdSetting(ref BinarizeThresholdParameter binThParam) //RENAME
         {
             InitializeComponent();
 
             //パラメータインスタンス生成
-            //TODO:生成
+            binarizeThresholdParam = binThParam;
+            ThresholdTextBox.Text = binarizeThresholdParam.threshold.ToString();
         }
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
             //パラメータ更新処理
-            //TODO:パラメータ更新処理
-
-            this.Close();
+            int th;
+            if (Int32.TryParse(ThresholdTextBox.Text, out th))
+            {
+                binarizeThresholdParam.threshold = th;
+                MessageBox.Show(
+                    "update OK.",
+                    "OK",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Input value.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace IP_BinarizeThreshold
         /// <summary>
         /// 設定画面フォーム
         /// </summary>
-        private Form SettingForm;
+        private static Form SettingForm;
 
         /// <summary>
         /// 画像処理名
@@ -34,7 +34,7 @@ namespace IP_BinarizeThreshold
                 return _progress;
             }
 
-            private set
+            set
             {
                 if (0 <= value && value <= 100)
                 {
@@ -48,6 +48,8 @@ namespace IP_BinarizeThreshold
         }
 
 
+        BinarizeThresholdParameter binarizeThresholdParameter;
+
 
         /// <summary>
         /// 設定画面表示メソッド
@@ -55,15 +57,11 @@ namespace IP_BinarizeThreshold
         /// <returns></returns>
         public void Setting()
         {
-            if (SettingForm == null)
+            binarizeThresholdParameter = new BinarizeThresholdParameter();
+            if (SettingForm == null || SettingForm.IsDisposed)
             {
-                SettingForm = new BinarizeThresholdSetting(); //RENAME
+                SettingForm = new BinarizeThresholdSetting(ref binarizeThresholdParameter); //RENAME
             }
-            else if (SettingForm.IsDisposed)
-            {
-                SettingForm = new BinarizeThresholdSetting(); //RENAME
-            }
-
             SettingForm.Show();
             return;
         }
@@ -86,15 +84,26 @@ namespace IP_BinarizeThreshold
             // outputBMP に処理後画像が格納されるように処理してください。 //
             //                                                            //
             // template:未定義ならば、真っ白の画像に変換                  //
-            for (int y = 0; y < imageSize.Height; y++)                    //
-            {                                                             //
-                for (int x = 0; x < imageSize.Width; x++)                 //
-                {                                                         //
-                    outputBMP.SetPixel(x, y, Color.White);                //
-                    procPixel++;                                          //
-                    progress = procPixel * 100 / maxProgress;             //
-                }                                                         //
-            }                                                             //
+            for (int y = 0; y < imageSize.Height; y++)
+            {
+                for (int x = 0; x < imageSize.Width; x++)
+                {
+                    Color c = inputBMP.GetPixel(x, y);
+                    int grayValue = (c.R + c.G + c.B) / 3;
+
+                    if (grayValue < binarizeThresholdParameter.threshold)
+                    {
+                        outputBMP.SetPixel(x, y, Color.Black);
+                    }
+                    else
+                    {
+                        outputBMP.SetPixel(x, y, Color.White);
+                    }
+
+                    procPixel++;
+                    progress = procPixel * 100 / maxProgress;
+                }
+            }
             ////////////////////////////////////////////////////////////////
 
             progress = 100;
