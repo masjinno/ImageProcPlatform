@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace IP_ProjectTemplate.Setting    //RENAME
+namespace IP_ProjectTemplate.Setting
 {
     public partial class ProjectTemplateSetting : Form  //RENAME
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace IP_ProjectTemplate.Parameter  //RENAME
+namespace IP_ProjectTemplate.Parameter
 {
     class ProjectTemplateParameter  //RENAME
     {

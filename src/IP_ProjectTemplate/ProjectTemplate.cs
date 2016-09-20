@@ -6,8 +6,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using ImageProcPlatform.Plugin;
-using IP_ProjectTemplate.Setting;   //RENAME
-using IP_ProjectTemplate.Parameter; //RENAME
+using IP_ProjectTemplate.Setting;
+using IP_ProjectTemplate.Parameter;
 
 namespace IP_ProjectTemplate
 {
