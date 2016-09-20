@@ -6,8 +6,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using ImageProcPlatform.Plugin;
-using IP_BinarizeThreshold.Setting;   //RENAME
-using IP_BinarizeThreshold.Parameter; //RENAME
+using IP_BinarizeThreshold.Setting;
+using IP_BinarizeThreshold.Parameter;
 
 namespace IP_BinarizeThreshold
 {
@@ -21,7 +21,7 @@ namespace IP_BinarizeThreshold
         /// <summary>
         /// 画像処理名
         /// </summary>
-        public string Name { get { return "ProjectTemplate"; } }    //RENAME
+        public string Name { get { return "BinarizeThreshold"; } }    //RENAME
 
         /// <summary>
         /// 画像処理進捗
@@ -57,11 +57,11 @@ namespace IP_BinarizeThreshold
         {
             if (SettingForm == null)
             {
-                SettingForm = new ProjectTemplateSetting(); //RENAME
+                SettingForm = new BinarizeThresholdSetting(); //RENAME
             }
             else if (SettingForm.IsDisposed)
             {
-                SettingForm = new ProjectTemplateSetting(); //RENAME
+                SettingForm = new BinarizeThresholdSetting(); //RENAME
             }
 
             SettingForm.Show();

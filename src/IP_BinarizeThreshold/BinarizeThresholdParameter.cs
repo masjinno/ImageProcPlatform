@@ -5,7 +5,7 @@ using System.Text;
 
 namespace IP_BinarizeThreshold.Parameter  //RENAME
 {
-    class ProjectTemplateParameter  //RENAME
+    class BinarizeThresholdParameter  //RENAME
     {
         /// <summary>
         /// 画像処理に使用するパラメータ

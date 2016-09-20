@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcPlatform", "ImageProcPlatform\ImageProcPlatform.csproj", "{0C25EA20-CBA6-4517-945F-3CF6D4CECE4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_GrayScale", "IP_GrayScale\IP_GrayScale.csproj", "{E6C08C61-95C2-4AF3-8407-C52FE31B266C}"
@@ -10,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_ProjectTemplate", "IP_ProjectTemplate\IP_ProjectTemplate.csproj", "{DE550F6A-656D-416C-97EA-7C3987B1582D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_Filter", "IP_Filter\IP_Filter.csproj", "{0DB250F9-439A-4BB7-968B-5E6722302882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_BinarizeThreshold", "IP_BinarizeThreshold\IP_BinarizeThreshold.csproj", "{82606023-76D5-4FA0-B71A-065FA8FC1CD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +87,18 @@ Global
 		{0DB250F9-439A-4BB7-968B-5E6722302882}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0DB250F9-439A-4BB7-968B-5E6722302882}.Release|Win32.ActiveCfg = Release|Any CPU
 		{0DB250F9-439A-4BB7-968B-5E6722302882}.Release|x86.ActiveCfg = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|Win32.ActiveCfg = Release|Any CPU
+		{82606023-76D5-4FA0-B71A-065FA8FC1CD0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

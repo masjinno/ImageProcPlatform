@@ -42,13 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectTemplate.cs" />
-    <Compile Include="ProjectTemplateParameter.cs" />
-    <Compile Include="ProjectTemplateSetting.cs">
+    <Compile Include="BinarizeThreshold.cs" />
+    <Compile Include="BinarizeThresholdParameter.cs" />
+    <Compile Include="BinarizeThresholdSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjectTemplateSetting.Designer.cs">
-      <DependentUpon>ProjectTemplateSetting.cs</DependentUpon>
+    <Compile Include="BinarizeThresholdSetting.Designer.cs">
+      <DependentUpon>BinarizeThresholdSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,12 +59,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProjectTemplateSetting.resx">
-      <DependentUpon>ProjectTemplateSetting.cs</DependentUpon>
+    <EmbeddedResource Include="BinarizeThresholdSetting.resx">
+      <DependentUpon>BinarizeThresholdSetting.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IP_ProjectTemplate.ico" />
     <Content Include="aboutProjectTemplate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

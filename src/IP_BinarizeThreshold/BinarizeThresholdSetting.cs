@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace IP_BinarizeThreshold.Setting    //RENAME
 {
-    public partial class ProjectTemplateSetting : Form  //RENAME
+    public partial class BinarizeThresholdSetting : Form  //RENAME
     {
         //パラメータ
         //TODO:宣言
 
-        public ProjectTemplateSetting() //RENAME
+        public BinarizeThresholdSetting() //RENAME
         {
             InitializeComponent();
 

@@ -1,6 +1,6 @@
 ﻿namespace IP_BinarizeThreshold.Setting    //RENAME
 {
-    partial class ProjectTemplateSetting
+    partial class BinarizeThresholdSetting
     {
         /// <summary>
         /// Required designer variable.
@@ -52,15 +52,15 @@
             this.OK_Button.UseVisualStyleBackColor = true;
             this.OK_Button.Click += new System.EventHandler(this.OK_Button_Click);
             // 
-            // ProjectTemplateSetting
+            // BinarizeThresholdSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.OK_Button);
             this.Controls.Add(this.Cancel_Button);
-            this.Name = "ProjectTemplateSetting";   //RENAME
-            this.Text = "ProjectTemplateSetting";   //RENAME
+            this.Name = "BinarizeThresholdSetting";   //RENAME
+            this.Text = "BinarizeThresholdSetting";   //RENAME
             this.ResumeLayout(false);
 
         }
