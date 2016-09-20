@@ -11,7 +11,7 @@ using IP_BinarizeThreshold.Parameter; //RENAME
 
 namespace IP_BinarizeThreshold
 {
-    public class ProjectTemplate : IImageProcPlugin
+    public class BinarizeThreshold : IImageProcPlugin
     {
         /// <summary>
         /// 設定画面フォーム
