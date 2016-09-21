@@ -51,7 +51,7 @@ namespace IP_ChangeBrightness
 
         public ChangeBrightness()
         {
-            changeBrightnessParameter = new ChangeBrightnessParameter(1);
+            changeBrightnessParameter = new ChangeBrightnessParameter(100);
         }
 
         /// <summary>
@@ -101,10 +101,10 @@ namespace IP_ChangeBrightness
                     int b = inputBMP.GetPixel(x, y).B;
                     h = getHue(r, g, b);
                     s = getSatuation(r, g, b);
-                    v = getBrightness(r, g, b);
+                    //v = getBrightness(r, g, b);
 
-                    //v *= (100.0 - changeBrightnessParameter.brightness) / (100.0 - 50);
-
+                    v = changeBrightnessParameter.brightness / 100.0;
+                    
                     getRGBColorFromHSV(h, s, v, out r, out g, out b);
 
                     outputBMP.SetPixel(x, y, Color.FromArgb(r, g, b));
